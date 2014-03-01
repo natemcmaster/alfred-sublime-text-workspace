@@ -8,7 +8,7 @@ files=['~/Library/Application Support/Sublime Text 3/Local/Session.sublime_sessi
 search = u'{query}'
 
 def errorout():
-	error=alfred.Item({'arg':''},'Open Sublime Text','No workspaces found')
+	error=alfred.Item({'arg':'new-window'},'Open Sublime Text','No workspaces found. Open new window.')
 	xml = alfred.xml([error])
 	alfred.write(xml)
 
@@ -43,5 +43,4 @@ else:
 		matches.append(i)
 	xml = alfred.xml(matches)
 	alfred.write(xml)
-
 
